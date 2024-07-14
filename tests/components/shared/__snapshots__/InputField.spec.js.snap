@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputField renders correctly 1`] = `
+<div>
+  <label
+    for="username"
+  >
+    Username
+  </label>
+  <input
+    class="px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-primary"
+    id="username"
+    placeholder=""
+    type="text"
+  />
+</div>
+`;

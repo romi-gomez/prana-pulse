@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-app",
+  "name": "prana-pulse",
   "private": true,
   "type": "module",
   "scripts": {
@@ -14,12 +14,11 @@
     "@nuxtjs/dotenv": "^1.4.2",
     "dotenv": "^16.4.5",
     "firebase": "^10.12.3",
-    "nuxt": "^3.12.3",
-    "vue": "latest"
+    "nuxt": "^3.12.3"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.24.8",
-    "@vue/test-utils": "^2.4.6",
+    "@vue/test-utils": "^2.4.0",
     "@vue/vue3-jest": "^29.2.6",
     "autoprefixer": "^10.4.19",
     "babel-jest": "^29.7.0",

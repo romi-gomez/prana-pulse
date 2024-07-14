@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer renders correctly 1`] = `
+<footer
+  class="bg-mainDark text-white p-4 mt-auto"
+>
+  <div
+    class="container mx-auto text-center"
+  >
+    <p>
+      © 2023 Your Company. All rights reserved.
+    </p>
+  </div>
+</footer>
+`;

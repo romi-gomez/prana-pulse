@@ -17,5 +17,4 @@
 </script>
 
 <style scoped>
-/* Add any styles specific to this component */
 </style>

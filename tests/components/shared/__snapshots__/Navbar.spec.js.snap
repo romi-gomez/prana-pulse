@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar renders correctly 1`] = `
+<nav
+  class="bg-main-dark text-white p-4"
+>
+  <ul
+    class="flex space-x-4"
+  >
+    <li>
+      <a
+        class="hover:underline"
+      >
+        Home
+      </a>
+    </li>
+    <li>
+      <a
+        class="hover:underline"
+      >
+        Profile
+      </a>
+    </li>
+    <li>
+      <a
+        class="hover:underline"
+      >
+        Oracles
+      </a>
+    </li>
+    <li>
+      <a
+        class="hover:underline"
+      >
+        Settings
+      </a>
+    </li>
+    <li>
+      <a
+        class="hover:underline"
+      >
+        Login
+      </a>
+    </li>
+    <li>
+      <a
+        class="hover:underline"
+      >
+        Signup
+      </a>
+    </li>
+  </ul>
+</nav>
+`;

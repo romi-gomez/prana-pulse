@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SectionTitle renders correctly 1`] = `
+<div
+  class="my-4"
+>
+  <h2
+    class="text-2xl font-semibold text-mainDark"
+  >
+    Test Title
+  </h2>
+</div>
+`;

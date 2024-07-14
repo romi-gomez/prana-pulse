@@ -22,6 +22,9 @@ export default defineNuxtConfig({
       postcssOptions: require('./postcss.config.js')
     }
   },
+  modules: [
+    '@nuxt/test-utils/module'
+  ],
   runtimeConfig: {
     public: {
       googleApiKey: process.env.GOOGLE_API_KEY,
