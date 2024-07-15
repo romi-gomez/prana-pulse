@@ -32,5 +32,8 @@ export default defineNuxtConfig({
       googleAppId: process.env.GOOGLE_APP_ID,
       measurementId: process.env.MEASUREMENT_ID,
     }
+  },
+  router: {
+    middleware: 'auth'
   }
 });
