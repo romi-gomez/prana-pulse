@@ -7,7 +7,6 @@
   </template>
   
   <script setup>
-  // No additional script needed for this basic structure
   </script>
   
   <style scoped>

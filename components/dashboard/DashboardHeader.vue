@@ -22,5 +22,5 @@
   </script>
   
   <style scoped>
-  /* No additional styles needed if using Tailwind */
+  
   </style>

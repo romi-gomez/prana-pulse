@@ -45,5 +45,5 @@ watch(() => props.modelValue, (newValue) => {
 </script>
 
 <style scoped>
-/* No additional styles needed if using Tailwind */
+
 </style>
