@@ -1,29 +1,38 @@
 <template>
-  <form @submit.prevent="handleSubmit" class="space-y-4">
-    <InputField v-model="email" type="email" placeholder="Email" />
-    <InputField v-model="password" type="password" placeholder="Password" />
-    <Button type="submit" class="w-full">Login</Button>
-    <AuthLinks />
-    <div v-if="localError" class="text-red-500">{{ localError }}</div>
+  <form @submit.prevent="handleSubmit">
+    <div>
+      <label>Email</label>
+      <input v-model="email" type="email" required />
+    </div>
+    <div>
+      <label>Password</label>
+      <input v-model="password" type="password" required />
+    </div>
+    <button type="submit">Login</button>
+    <div v-if="error" class="error">{{ error }}</div>
   </form>
 </template>
 
 <script setup>
 import { ref } from 'vue';
-import InputField from '@/components/shared/InputField.vue';
-import Button from '@/components/shared/Button.vue';
-import AuthLinks from '@/components/auth/AuthLinks.vue';
+import { useAuth } from '@/composables/useAuth';
+
+const emit = defineEmits(['submit']);
 
 const email = ref('');
 const password = ref('');
-const localError = ref(null);
+const { login, error } = useAuth();
 
-const handleSubmit = () => {
-  localError.value = null;
-  emit('submit', { email: email.value, password: password.value });
+const handleSubmit = async () => {
+  await login(email.value, password.value);
+  if (!error.value) {
+    emit('submit');
+  }
 };
 </script>
 
 <style scoped>
-
+.error {
+  color: red;
+}
 </style>

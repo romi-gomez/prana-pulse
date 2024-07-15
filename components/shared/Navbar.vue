@@ -5,15 +5,13 @@
       <li><router-link to="/dashboard" class="hover:underline">Profile</router-link></li>
       <li><router-link to="/oracles" class="hover:underline">Oracles</router-link></li>
       <li><router-link to="/settings" class="hover:underline">Settings</router-link></li>
-      <li><router-link to="/login" class="hover:underline">Login</router-link></li>
-      <li><router-link to="/signup" class="hover:underline">Signup</router-link></li>
-       
     </ul>
+    <AuthStatus />
   </nav>
 </template>
 
 <script setup>
-// No additional script needed for this basic structure
+import AuthStatus from '@/components/auth/AuthStatus.vue';
 </script>
 
 <style scoped>

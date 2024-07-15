@@ -1,23 +1,18 @@
 <template>
   <div>
     <h1>Login</h1>
-    <LoginForm @submit="handleSubmit" />
-    <div v-if="error" class="text-red-500">{{ error }}</div>
+    <LoginForm @submit="handleLogin" />
   </div>
 </template>
 
 <script setup>
 import LoginForm from '@/components/auth/LoginForm.vue';
-import { useAuth } from '@/composables/useAuth';
+import { useRouter } from 'vue-router';
 
-const { login, error } = useAuth();
+const router = useRouter();
 
-const handleSubmit = async (formData) => {
-  try {
-    await login(formData.email, formData.password);
-  } catch (err) {
-    console.error('Login failed:', err.message);
-  }
+const handleLogin = () => {
+  router.push('/dashboard'); 
 };
 </script>
 

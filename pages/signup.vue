@@ -1,24 +1,18 @@
 <template>
   <div>
-    <h1>Register</h1>
-    <SignupForm @submit="handleSubmit" />
-    <div v-if="error" class="text-red-500">{{ error }}</div>
+    <h1>Signup</h1>
+    <SignupForm @submit="handleSignup" />
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue';
 import SignupForm from '@/components/auth/SignupForm.vue';
-import { useAuth } from '@/composables/useAuth';
+import { useRouter } from 'vue-router';
 
-const { register, error } = useAuth();
+const router = useRouter();
 
-const handleSubmit = async (formData) => {
-  try {
-    await register(formData.email, formData.password, formData.username);
-  } catch (err) {
-    console.error('Registration failed:', err.message);
-  }
+const handleSignup = () => {
+  router.push('/dashboard');
 };
 </script>
 

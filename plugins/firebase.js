@@ -23,3 +23,4 @@ export default defineNuxtPlugin((nuxtApp) => {
 
   nuxtApp.provide('auth', auth);
 });
+
