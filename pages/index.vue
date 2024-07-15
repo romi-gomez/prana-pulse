@@ -1,17 +1,15 @@
 <template>
-    <div>
-      <h1>Welcome to the Application</h1>
-      <p>This is the home page.</p>
-      <router-link to="/login">Login</router-link>
-      <router-link to="/signup">Signup</router-link>
-      <router-link to="/dashboard">Go to Dashboard</router-link>
+  <Background :rotateColors="true">
+    <div class="flex items-center justify-center h-full text-white">
+      <h1 class="text-4xl font-bold">Welcome to the Homepage</h1>
     </div>
-  </template>
-  
-  <script setup>
+  </Background>
+</template>
 
-  </script>
-  
-  <style scoped>
+<script setup>
+import Background from '@/components/shared/Background.vue';
+</script>
 
-  </style>
+<style scoped>
+/* Add any additional styles specific to this page */
+</style>

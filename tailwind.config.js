@@ -12,11 +12,10 @@ module.exports = {
   },
   theme: {
     extend: {
-      fontFamily: {
+      'font-family': {
         sans: ['proxima-nova-wide', 'sans-serif'],
-        text: ['proxima-nova-wide', 'sans-serif'],
-        headings: ['adventures-unlimited', 'sans-serif'],
-        display: ['richmond-display', 'sans-serif'],
+        display: ['adventures-unlimited', 'sans-serif'],
+        headings: ['richmond-display', 'sans-serif'],
       },
       colors: {
         'main-dark': '#14081B',
