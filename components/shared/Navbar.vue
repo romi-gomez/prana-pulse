@@ -1,5 +1,5 @@
 <template>
-  <nav class="bg-main-light text-main-dark p-4 flex items-center justify-between font-headings">
+  <nav class="fixed top-0 left-0 w-full bg-main-light text-main-dark p-4 flex items-center justify-between font-sans z-50">
     <router-link to="/" class="flex items-center">
       <img src="/images/logo.svg" alt="Logo" class="h-8 mr-4 max-w-[12rem]">
     </router-link>

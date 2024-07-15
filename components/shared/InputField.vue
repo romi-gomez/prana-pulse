@@ -1,20 +1,16 @@
 <template>
-  <div>
-    <label :for="name">{{ label }}</label>
-    <input 
-      :id="name" 
-      :type="type" 
-      :placeholder="placeholder" 
-      v-model="inputValue"
-      @input="$emit('update:modelValue', inputValue)" 
-      class="px-4 py-2 border rounded focus:outline-none focus:ring-2 focus:ring-primary" 
+  <div class="relative">
+    <input
+      :type="type"
+      :placeholder="placeholder"
+      class="w-full px-4 py-2 border-b border-main-dark bg-transparent text-main-dark placeholder-main-dark focus:outline-none focus:ring-0"
+      :value="modelValue"
+      @input="$emit('update:modelValue', $event.target.value)"
     />
   </div>
 </template>
 
 <script setup>
-import { defineProps, ref, watch } from 'vue'
-
 const props = defineProps({
   type: {
     type: String,
@@ -24,26 +20,13 @@ const props = defineProps({
     type: String,
     default: ''
   },
-  label: {
-    type: String,
-    required: true
-  },
-  name: {
-    type: String,
-    required: true
-  },
   modelValue: {
     type: String,
     default: ''
   }
-})
-
-const inputValue = ref(props.modelValue)
-watch(() => props.modelValue, (newValue) => {
-  inputValue.value = newValue
-})
+});
 </script>
 
 <style scoped>
-
+/* Optional: Additional styles if needed */
 </style>

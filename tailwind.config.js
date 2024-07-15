@@ -7,12 +7,9 @@ module.exports = {
     './plugins/**/*.{js,ts}',
     './nuxt.config.{js,ts}',
   ],
-  variants: {
-    extend: {},
-  },
   theme: {
     extend: {
-      'font-family': {
+      fontFamily: {
         sans: ['proxima-nova-wide', 'sans-serif'],
         display: ['adventures-unlimited', 'sans-serif'],
         headings: ['richmond-display', 'sans-serif'],

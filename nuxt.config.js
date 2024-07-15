@@ -1,16 +1,6 @@
 import { defineNuxtConfig } from 'nuxt/config';
 
 export default defineNuxtConfig({
-  devtools: { enabled: true },
-  modules: ['@nuxtjs/tailwindcss'],
-  plugins: [
-    { src: '~/plugins/firebase.js', mode: 'client' }
-  ],
-  head: {
-    link: [
-      { rel: 'stylesheet', href: 'https://use.typekit.net/wwt7sct.css' }
-    ]
-  },
   css: [
     '@/assets/css/tailwind.css'
   ],
@@ -21,7 +11,14 @@ export default defineNuxtConfig({
         autoprefixer: {},
       },
     },
+    transpile: ['@nuxt/postcss8'],
   },
+  head: {
+    link: [
+      { rel: 'stylesheet', href: 'https://use.typekit.net/wwt7sct.css' }
+    ]
+  },
+  modules: ['@nuxtjs/tailwindcss'],
   runtimeConfig: {
     public: {
       googleApiKey: process.env.GOOGLE_API_KEY,
@@ -34,6 +31,6 @@ export default defineNuxtConfig({
     }
   },
   router: {
-    middleware: 'auth'
+    middleware: 'auth.global'
   }
 });

@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="relative w-full h-screen"
-    :class="overlayClass"
-  >
+  <div class="relative w-full h-screen">
     <div class="relative z-10 flex items-center justify-center h-full text-white">
       <slot></slot>
     </div>

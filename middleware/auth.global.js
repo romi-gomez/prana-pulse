@@ -1,14 +1,12 @@
 export default defineNuxtRouteMiddleware(async (to, from) => {
-  const nuxtApp = useNuxtApp();
-  const $auth = nuxtApp.$auth;
-
+  const { $auth } = useNuxtApp();
   console.log('Auth middleware executing', $auth); // Debugging line
 
   const publicPages = ['/', '/login', '/signup'];
   const authRequired = !publicPages.includes(to.path);
 
   if ($auth) {
-    return new Promise((resolve) => {
+    await new Promise((resolve, reject) => {
       const unsubscribe = $auth.onAuthStateChanged((user) => {
         unsubscribe();
         if (authRequired && !user) {
@@ -20,6 +18,6 @@ export default defineNuxtRouteMiddleware(async (to, from) => {
       });
     });
   } else {
-    console.error('Auth is not defined');
+    console.error('Auth is not defined'); // Debugging line
   }
 });

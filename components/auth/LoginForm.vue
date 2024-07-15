@@ -1,21 +1,17 @@
 <template>
-  <form @submit.prevent="handleSubmit">
-    <div>
-      <label>Email</label>
-      <input v-model="email" type="email" required />
-    </div>
-    <div>
-      <label>Password</label>
-      <input v-model="password" type="password" required />
-    </div>
-    <button type="submit">Login</button>
-    <div v-if="error" class="error">{{ error }}</div>
+  <form class="space-y-4" @submit.prevent="handleSubmit">
+    <InputField type="email" placeholder="Email" v-model="email" />
+    <InputField type="password" placeholder="Password" v-model="password" />
+    <Button type="submit" class="w-full bg-main-dark">Login</Button>
   </form>
 </template>
 
 <script setup>
 import { ref } from 'vue';
-import { useAuth } from '@/composables/useAuth';
+import InputField from '@/components/shared/InputField.vue';
+import Button from '@/components/shared/Button.vue';
+
+
 
 const emit = defineEmits(['submit']);
 

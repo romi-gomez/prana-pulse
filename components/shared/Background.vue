@@ -1,15 +1,15 @@
 <template>
-    <div class="relative w-full h-screen overflow-hidden">
+    <div class="relative w-full h-screen overflow-hidden group">
       <img
         src="/images/background.webp"
         alt="Background Image"
-        class="absolute inset-0 w-full h-full object-cover z-0 transition-transform duration-500 ease-in-out transform hover:scale-105"
+        class="absolute inset-0 w-full h-full object-cover z-0 transition-transform duration-500 ease-in-out transform group-hover:scale-105"
       />
       <div
         class="absolute inset-0 transition-all duration-5000 ease-in-out bg-opacity-70 z-10"
         :class="currentColorClass"
       ></div>
-      <div class="relative z-20 flex items-center justify-center h-full text-white">
+      <div class="relative z-20 flex items-center justify-center h-full">
         <slot></slot>
       </div>
     </div>

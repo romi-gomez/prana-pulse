@@ -3,22 +3,20 @@ import { getAuth } from 'firebase/auth';
 import { defineNuxtPlugin, useRuntimeConfig } from '#app';
 
 export default defineNuxtPlugin((nuxtApp) => {
-  const config = useRuntimeConfig().public;
+  const config = useRuntimeConfig();
 
   const firebaseConfig = {
-    apiKey: config.googleApiKey,
-    authDomain: config.googleAuthDomain,
-    projectId: config.googleProjectId,
-    storageBucket: config.googleStorageBucket,
-    messagingSenderId: config.googleMessagingSenderId,
-    appId: config.googleAppId,
-    measurementId: config.measurementId,
+    apiKey: config.public.googleApiKey,
+    authDomain: config.public.googleAuthDomain,
+    projectId: config.public.googleProjectId,
+    storageBucket: config.public.googleStorageBucket,
+    messagingSenderId: config.public.googleMessagingSenderId,
+    appId: config.public.googleAppId,
+    measurementId: config.public.measurementId,
   };
 
   const app = initializeApp(firebaseConfig);
   const auth = getAuth(app);
-
-  console.log('Firebase initialized:', auth); // Debugging line
 
   nuxtApp.provide('auth', auth);
 });
