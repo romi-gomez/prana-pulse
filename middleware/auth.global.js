@@ -6,13 +6,15 @@ export default defineNuxtRouteMiddleware(async (to, from) => {
   const authRequired = !publicPages.includes(to.path);
 
   if ($auth) {
-    await new Promise((resolve, reject) => {
+    console.log('Auth is defined, checking user state'); // Debugging line
+    await new Promise((resolve) => {
       const unsubscribe = $auth.onAuthStateChanged((user) => {
         unsubscribe();
         if (authRequired && !user) {
           console.log('User not authenticated, redirecting to signup');
           resolve(navigateTo('/signup'));
         } else {
+          console.log('User authenticated or public page, proceeding'); // Debugging line
           resolve();
         }
       });

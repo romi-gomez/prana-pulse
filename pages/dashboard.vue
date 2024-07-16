@@ -1,54 +1,20 @@
 <template>
-  <div class="relative w-full h-screen">
-    <div class="relative z-10 flex items-center justify-center h-full text-white">
-      <slot></slot>
+  <div class="pt-20 p-8">
+    <div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+      <CycleCard v-for="cycle in cycles" :key="cycle.name" :cycle="cycle" />
+    </div>
+    <div class="mt-8 flex justify-center">
+      <OracleCard cycle="pulsar" image="oracle-test.webp" />
     </div>
   </div>
 </template>
 
 <script setup>
-import { ref, onMounted, onBeforeUnmount } from 'vue';
-
-const props = defineProps({
-  rotateColors: {
-    type: Boolean,
-    default: false
-  },
-  staticColor: {
-    type: String,
-    default: 'pulsar-100'
-  }
-});
-
-const overlayClass = ref(`bg-${props.staticColor}`);
-const colors = ['pulsar-100', 'pulsar-200', 'sintonizar-100', 'sintonizar-200', 'resonar-100', 'resonar-200', 'armonizar-100', 'armonizar-200', 'expresar-100', 'expresar-200', 'sincronizar-100', 'sincronizar-200', 'amplificar-100', 'amplificar-200'];
-let colorIndex = 0;
-let intervalId = null;
-
-const startColorRotation = () => {
-  intervalId = setInterval(() => {
-    overlayClass.value = `bg-${colors[colorIndex]}`;
-    colorIndex = (colorIndex + 1) % colors.length;
-  }, 1000);
-};
-
-const stopColorRotation = () => {
-  if (intervalId) {
-    clearInterval(intervalId);
-  }
-};
-
-if (props.rotateColors) {
-  onMounted(() => {
-    startColorRotation();
-  });
-  onBeforeUnmount(() => {
-    stopColorRotation();
-  });
-} else {
-  overlayClass.value = `bg-${props.staticColor}`;
-}
+import CycleCard from '@/components/Dashboard/CycleCard.vue';
+import OracleCard from '@/components/Oracles/OracleCard.vue';
+import { cycles } from '@/content/cycles.js';
 </script>
 
 <style scoped>
+/* Additional styles if needed */
 </style>

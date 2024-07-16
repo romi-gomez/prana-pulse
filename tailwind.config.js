@@ -47,6 +47,20 @@ module.exports = {
           200: '#7848BF',
         },
       },
+      keyframes: {
+        float: {
+          '0%': { transform: 'translate3d(0, 15px, 0)' },
+          '100%': { transform: 'translate3d(0, -15px, 0)' },
+        },
+        hoverEffect: {
+          '0%': { transform: 'rotate3d(1, 2.0, 3.0, -20deg) scale(1)' },
+          '100%': { transform: 'rotate3d(1, 2.0, 3.0, 20deg) scale(1.1)' },
+        },
+      },
+      animation: {
+        float: 'float 4s ease-in-out alternate infinite',
+        hoverEffect: 'hoverEffect 0.5s ease-in-out',
+      },
     },
   },
   plugins: [],

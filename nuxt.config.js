@@ -19,6 +19,9 @@ export default defineNuxtConfig({
     ]
   },
   modules: ['@nuxtjs/tailwindcss'],
+  plugins: [
+    { src: '~/plugins/firebase.js', mode: 'client' }
+  ],
   runtimeConfig: {
     public: {
       googleApiKey: process.env.GOOGLE_API_KEY,
@@ -29,8 +32,5 @@ export default defineNuxtConfig({
       googleAppId: process.env.GOOGLE_APP_ID,
       measurementId: process.env.MEASUREMENT_ID,
     }
-  },
-  router: {
-    middleware: 'auth.global'
   }
 });
