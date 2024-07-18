@@ -1,11 +1,11 @@
 <template>
     <div>
-      <CycleDetail />
+      <CycleDetails />
     </div>
   </template>
   
   <script setup>
-  import CycleDetail from '@/components/cycle/CycleDetail.vue'
+  import CycleDetails from '@/components/cycles/CycleDetails.vue'
   </script>
   
   <style scoped>

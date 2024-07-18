@@ -1,9 +1,17 @@
-export const cycles = [
-    { name: 'Pulsar', color: 'bg-pulsar-100' },
-    { name: 'Sintonizar', color: 'bg-sintonizar-100' },
-    { name: 'Resonar', color: 'bg-resonar-100' },
-    { name: 'Armonizar', color: 'bg-armonizar-100' },
-    { name: 'Expresar', color: 'bg-expresar-100' },
-    { name: 'Sincronizar', color: 'bg-sincronizar-100' },
-    { name: 'Amplificar', color: 'bg-amplificar-100' }
-  ];
+import { pulsar } from './cycles/pulsar';
+import { sintonizar } from './cycles/sintonizar';
+import { resonar } from './cycles/resonar';
+import { armonizar } from './cycles/armonizar';
+import { expresar } from './cycles/expresar';
+import { sincronizar } from './cycles/sincronizar';
+import { amplificar } from './cycles/amplificar';
+
+export const cycles = {
+  pulsar,
+  sintonizar,
+  resonar,
+  armonizar,
+  expresar,
+  sincronizar,
+  amplificar
+};
