@@ -1,7 +1,7 @@
 <template>
     <div class="space-y-4">
       <h2 class="text-xl font-semibold">Overview</h2>
-      <p class="text-gray-700">Welcome to your dashboard. Here you can see an overview of your activities and progress.</p>
+      <p class="text-main-dark">Welcome to your dashboard. Here you can see an overview of your activities and progress.</p>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
         
       </div>

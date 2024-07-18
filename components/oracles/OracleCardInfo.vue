@@ -1,7 +1,7 @@
 <template>
     <div class="p-4">
       <h3 class="text-xl font-bold">{{ title }}</h3>
-      <p class="text-gray-700">{{ description }}</p>
+      <p class="text-main-dark">{{ description }}</p>
       <div class="mt-4">
         <p class="text-gray-600"><strong>Details:</strong> {{ details }}</p>
         <p class="text-gray-600"><strong>Meaning:</strong> {{ meaning }}</p>
