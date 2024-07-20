@@ -32,5 +32,16 @@ export default defineNuxtConfig({
       googleAppId: process.env.GOOGLE_APP_ID,
       measurementId: process.env.MEASUREMENT_ID,
     }
+  },
+  i18n: {
+    locales: [
+      { code: 'en', iso: 'en-US', file: 'en.json' },
+      { code: 'es', iso: 'es-ES', file: 'es.json' }
+    ],
+    defaultLocale: 'en',
+    langDir: 'content/',
+    vueI18n: {
+      fallbackLocale: 'en'
+    }
   }
 });

@@ -5,8 +5,8 @@
       <div
         v-for="i in 7"
         :key="i"
-        class="h-2 w-1/6 rounded mx-0.5 border-2"
-        :class="`${cycleBorderColor}`"
+        class="h-2 w-1/6 rounded mx-0.5"
+        :class="`${progressBackground}`"
       ></div>
     </div>
   </div>
@@ -24,7 +24,7 @@ const props = defineProps({
 });
 
 const cycleBackgroundColor = computed(() => `bg-${props.cycle.key}-100`);
-const cycleBorderColor = computed(() => `border-${props.cycle.key}-200`);
+const progressBackground = computed(() => `bg-${props.cycle.key}-200`);
 
 onMounted(()=>{
   console.log(props.cycle)

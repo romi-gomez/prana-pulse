@@ -4,7 +4,7 @@ import { resonar } from './cycles/resonar';
 import { armonizar } from './cycles/armonizar';
 import { expresar } from './cycles/expresar';
 import { sincronizar } from './cycles/sincronizar';
-import { amplificar } from './cycles/amplificar';
+import { amplificar } from './cycles/amplificar-es';
 
 export const cycles = {
   pulsar,

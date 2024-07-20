@@ -1,0 +1,34 @@
+{
+  "displayName": "Expresar",
+  "theory": "/media/theory/expresar/expresar-theory-en.md",
+  "backImage": "/media/images/expresar/expresar-back.jpg",
+  "concepts": {
+    "concept1": {
+      "displayName": "Concept 1",
+      "theory": "/media/theory/expresar/concept1-theory-en.md",
+      "items": {
+        "item1": {
+          "title": "Item 1",
+          "theory": "/media/theory/expresar/item1-theory-en.md"
+        }
+        // Add items 2-7 similarly
+      },
+      "powerAnimal": {
+        "name": "Animal 1",
+        "images": [
+          "/media/images/expresar/image1.jpg",
+          "/media/images/expresar/image2.jpg"
+        ],
+        "explanation": "Explanation about the animal",
+        "guidedMeditations": [
+          { "name": "Meditation 1", "url": "/media/audio/expresar/meditation1-en.mp3" },
+          { "name": "Meditation 2", "url": "/media/audio/expresar/meditation2-en.mp3" }
+        ],
+        "oracleProposals": [
+          { "name": "Proposal 1", "text": "Proposal text 1" },
+          { "name": "Proposal 2", "text": "Proposal text 2" }
+        ]
+      }
+    }
+  }
+}

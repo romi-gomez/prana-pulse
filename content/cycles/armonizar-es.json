@@ -1,0 +1,34 @@
+{
+    "displayName": "Armonizar",
+    "theory": "/media/theory/armonizar/armonizar-theory-es.md",
+    "backImage": "/media/images/armonizar/armonizar-back.jpg",
+    "concepts": {
+      "concept1": {
+        "displayName": "Concepto 1",
+        "theory": "/media/theory/armonizar/concept1-theory-es.md",
+        "items": {
+          "item1": {
+            "title": "Elemento 1",
+            "theory": "/media/theory/armonizar/item1-theory-es.md"
+          }
+          // Add items 2-7 similarly
+        },
+        "powerAnimal": {
+          "name": "Animal 1",
+          "images": [
+            "/media/images/armonizar/image1.jpg",
+            "/media/images/armonizar/image2.jpg"
+          ],
+          "explanation": "Explicación sobre el animal",
+          "guidedMeditations": [
+            { "name": "Meditación 1", "url": "/media/audio/armonizar/meditation1-es.mp3" },
+            { "name": "Meditación 2", "url": "/media/audio/armonizar/meditation2-es.mp3" }
+          ],
+          "oracleProposals": [
+            { "name": "Propuesta 1", "text": "Texto de la propuesta 1" },
+            { "name": "Propuesta 2", "text": "Texto de la propuesta 2" }
+          ]
+        }
+      }
+    }
+  }

@@ -1,0 +1,46 @@
+{
+  "displayName": "Sincronizar",
+  "theory": "/media/theory/sincronizar/sincronizar-theory-en.md",
+  "backImage": "/media/images/sincronizar/sincronizar-back.jpg",
+  "concepts": {
+    "concept1": {
+      "displayName": "Concept 1",
+      "theory": "/media/theory/sincronizar/concept1-theory-en.md",
+      "items": {
+        "item1": {
+          "title": "Item 1",
+          "theory": "/media/theory/sincronizar/item1-theory-en.md"
+        }
+        // Add items 2-7 similarly
+      },
+      "powerAnimal": {
+        "name": "Animal 1",
+        "images": [
+          "/media/images/sincronizar/image1.jpg",
+          "/media/images/sincronizar/image2.jpg"
+        ],
+        "explanation": "Explanation about the animal",
+        "guidedMeditations": [
+          {
+            "name": "Meditation 1",
+            "url": "/media/audio/sincronizar/meditation1-en.mp3"
+          },
+          {
+            "name": "Meditation 2",
+            "url": "/media/audio/sincronizar/meditation2-en.mp3"
+          }
+        ],
+        "oracleProposals": [
+          {
+            "name": "Proposal 1",
+            "text": "Proposal text 1"
+          },
+          {
+            "name": "Proposal 2",
+            "text": "Proposal text 2"
+          }
+        ]
+      }
+    }
+  }
+}
