@@ -20,7 +20,8 @@ export default defineNuxtConfig({
   },
   modules: ['@nuxtjs/tailwindcss'],
   plugins: [
-    { src: '~/plugins/firebase.js', mode: 'client' }
+    { src: '~/plugins/firebase.js', mode: 'client' },
+    '~/plugins/i18n.js'
   ],
   runtimeConfig: {
     public: {

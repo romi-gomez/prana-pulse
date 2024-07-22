@@ -1,15 +1,17 @@
-export const pranaPulse = {
+const pranaPulse = {
   theory: {
     en: "prana-pulse-theory-en.md",
     es: "prana-pulse-theory-es.md"
   },
   cycles: [
-    { key: "pulsar", displayName: { en: "Pulsar", es: "Pulsar" } },
-    { key: "sintonizar", displayName: { en: "Sintonizar", es: "Sintonizar" } },
-    { key: "resonar", displayName: { en: "Resonar", es: "Resonar" } },
-    { key: "armonizar", displayName: { en: "Armonizar", es: "Armonizar" } },
-    { key: "expresar", displayName: { en: "Expresar", es: "Expresar" } },
-    { key: "sincronizar", displayName: { en: "Sincronizar", es: "Sincronizar" } },
-    { key: "amplificar", displayName: { en: "Amplificar", es: "Amplificar" } }
+    { key: "pulsar", displayName: { en: "Pulse", es: "Pulsar" } },
+    { key: "sintonizar", displayName: { en: "Synthesize", es: "Sintonizar" } },
+    { key: "resonar", displayName: { en: "Resonate", es: "Resonar" } },
+    { key: "armonizar", displayName: { en: "Armonize", es: "Armonizar" } },
+    { key: "expresar", displayName: { en: "Express", es: "Expresar" } },
+    { key: "sincronizar", displayName: { en: "Synchronize", es: "Sincronizar" } },
+    { key: "amplificar", displayName: { en: "Amplify", es: "Amplificar" } }
   ]
 };
+
+export default pranaPulse;
