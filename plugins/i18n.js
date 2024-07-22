@@ -4,6 +4,10 @@ import { createI18n } from 'vue-i18n';
 import pranaPulse from '~/content/pranaPulse.js';
 import cyclesEn from '~/content/cycles-en.js';
 import cyclesEs from '~/content/cycles-es.js';
+import homepageEn from '~/content/homepage-en.json';
+import homepageEs from '~/content/homepage-es.json';
+import signupEn from '~/content/signup-en.json';
+import signupEs from '~/content/signup-es.json';
 
 const formatCyclesNames = (cycles, lang) => {
   let formattedCycles = {};
@@ -19,14 +23,18 @@ const messages = {
       theory: pranaPulse.theory.en,
       cycles: formatCyclesNames(pranaPulse.cycles, "en")
     },
-    cycles: cyclesEn
+    cycles: cyclesEn,
+    homepage: homepageEn,
+    signup: signupEn
   },
   es: {
     pranaPulse: {
       theory: pranaPulse.theory.es,
       cycles: formatCyclesNames(pranaPulse.cycles, "es")
     },
-    cycles: cyclesEs
+    cycles: cyclesEs,
+    homepage: homepageEs,
+    signup: signupEs
   }
 };
 

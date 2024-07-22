@@ -1,34 +1,31 @@
+<!-- LoginForm.vue -->
 <template>
-  <form class="space-y-4" @submit.prevent="handleSubmit">
-    <InputField type="email" placeholder="Email" v-model="email" />
-    <InputField type="password" placeholder="Password" v-model="password" />
-    <Button type="submit" class="w-full bg-main-dark">Login</Button>
+  <form @submit.prevent="handleSubmit" class="space-y-4">
+    <InputField v-model="email" type="email" :placeholder="$t('signup.emailPlaceholder')" />
+    <InputField v-model="password" type="password" :placeholder="$t('signup.passwordPlaceholder')" />
+    <Button type="submit" class="w-full bg-main-dark">{{ $t('signup.registerButton') }}</Button>
+    <div v-if="localError" class="text-red-500">{{ localError }}</div>
   </form>
 </template>
 
 <script setup>
 import { ref } from 'vue';
+import { useI18n } from 'vue-i18n';
 import InputField from '@/components/shared/InputField.vue';
 import Button from '@/components/shared/Button.vue';
 
-
-
 const emit = defineEmits(['submit']);
+const { t } = useI18n();
 
 const email = ref('');
 const password = ref('');
-const { login, error } = useAuth();
+const localError = ref(null);
 
-const handleSubmit = async () => {
-  await login(email.value, password.value);
-  if (!error.value) {
-    emit('submit');
-  }
+const handleSubmit = () => {
+  localError.value = null;
+  emit('submit', { email: email.value, password: password.value });
 };
 </script>
 
 <style scoped>
-.error {
-  color: red;
-}
 </style>

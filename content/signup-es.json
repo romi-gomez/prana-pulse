@@ -1,0 +1,10 @@
+{
+  "logintitle": "Ingresar",
+  "signuptitle": "Registrarse",
+  "usernamePlaceholder": "Nombre de usuario",
+  "emailPlaceholder": "Correo electrónico",
+  "passwordPlaceholder": "Contraseña",
+  "confirmPasswordPlaceholder": "Confirmar Contraseña",
+  "registerButton": "Registrar",
+  "passwordsDoNotMatch": "Las contraseñas no coinciden"
+}

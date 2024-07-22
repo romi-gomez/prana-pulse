@@ -3,11 +3,11 @@
     <div class="flex flex-col items-center justify-center h-screen text-white text-center">
       <div>
         <h1 class="font-headings text-4xl font-light">
-          Connect to
-          <span class="block font-display text-9xl">Your Inner Rhythm</span>
+          {{ t('homepage.heroText.line1') }}
+          <span class="block font-display text-9xl">{{ t('homepage.heroText.line2') }}</span>
         </h1>
         <router-link to="/signup" class="inline-block mt-8 px-8 py-3 border border-white text-white rounded-full text-1xl bg-main-dark bg-opacity-20 hover:bg-opacity-30 transition-colors duration-300 tracking-wider">
-          I want to connect
+          {{ t('homepage.buttonText') }}
         </router-link>
       </div>
       <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2">
@@ -22,7 +22,10 @@
 </template>
 
 <script setup>
+import { useI18n } from 'vue-i18n';
 import Background from '@/components/shared/Background.vue';
+
+const { t } = useI18n();
 
 const scrollToContent = () => {
   const yOffset = -70; // Offset for fixed header if any
