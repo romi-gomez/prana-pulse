@@ -12,12 +12,12 @@ module.exports = {
       fontFamily: {
         sans: ['proxima-nova-wide', 'sans-serif'],
         display: ['adventures-unlimited', 'sans-serif'],
-        headings: ['richmond-display', 'sans-serif'],
+        headings: ['Newsreader', 'sans-serif'],
       },
       colors: {
-        'main-dark': '#14081B',
-        'main-medium': '#9C91A2',
-        'main-light': '#F2ECF6',
+        'main-dark': '#2F2A26',
+        'main-medium': '#8C7F75',
+        'main-light': '#F4E1D2',
         pulsar: {
           100: '#F57E88',
           200: '#E84855',
@@ -39,12 +39,12 @@ module.exports = {
           200: '#0CAADC',
         },
         sincronizar: {
-          100: '#5858DA',
-          200: '#2F2FB9',
+          100: '#9797FF',
+          200: '#5F5FE7',
         },
         amplificar: {
-          100: '#3F1282',
-          200: '#7848BF',
+          100: '#B784EF',
+          200: '#8B3ADA',
         },
       },
       keyframes: {

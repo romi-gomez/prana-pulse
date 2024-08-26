@@ -38,7 +38,6 @@ const messages = {
   }
 };
 
-console.log("MESSAGES:::::::" , messages)
 export default defineNuxtPlugin(nuxtApp => {
   const i18n = createI18n({
     legacy: false,
